@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: sans-serif;
+}
+.mainCon{
+    display: flex;
+    margin-bottom: 50px;
+    
+    /* padding-top: 10px; */
+}
+.right{
+    width: 67%;
+   
+    text-align: center;
+}
+.left{
+    
+    /* width: 60%; */
+    margin-left: 19px;
+    
+}
+.vidd{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+video{
+    width: 100%;
+    height: auto;
+}
+.vidd img{
+    width: 100%;
+    margin-top: 28px;
+}
+h3{
+    margin-top: 12px;
+    color: green;
+    font-family: 'Abel', sans-serif;
+}
+.buy{
+    padding: 22px;
+    background: rgb(241, 241, 241);
+}
+.buy li{
+    color: green;
+    padding-top: 7px;
+}
+.buttons{
+    background: rgb(1, 99, 1);
+    margin-left: 23px;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+.code{
+    padding: 22px;
+    background: rgb(241, 241, 241);
+    text-align: center;
+    margin-top: 33px;
+    display: flex;
+}
+.details{
+    padding: 0px;
+    padding-top: 22px;
+    background: rgb(241, 241, 241);
+    margin-top: 33px; 
+    word-spacing: 1.2;
+}
+.details li{
+    list-style-type: none;
+    padding: 9px;
+}
+.details span{
+    font-size:18px ;
+}
+.middle{
+    width: auto;
+    height: 25vh;
+    background: rgb(241, 241, 241);
+    margin-top: 73px;
+    text-align: center;
+    
+
+}
+.middle ul{
+    list-style: none;
+    color: green;
+}
+.buttomm{
+    display: none;
+}
+.lastimg{
+    display: none;
+}
+.res{
+    display: none;
+}
+@media screen and (max-width: 500px){
+	.buttomm{
+        display: contents;
+    }
+    .buy{
+        margin: 22px;
+    }
+    .code{
+        margin: 22px;
+    }
+    .details{
+        margin: 22px;
+    }
+    .lastimg{
+        text-align: center;
+        display: contents;
+    }
+    .mainCon{
+        display: none;
+    }
+    .res{
+        display: contents;
+        margin-top: 21px;
+    }
+    .middle{
+        height: auto;
+        padding-bottom: 10px;
+        padding-top: 9px;
+       position: relative;
+       top: 35px;
+       margin-bottom: 21px;
+    }
+	
+}
+

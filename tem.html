@@ -1,0 +1,462 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['Email'])) {
+    header("location: login.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="Style/tem-style.css">
+    <link rel="stylesheet" href="js/animate.min.css">
+    <script src="https://kit.fontawesome.com/978f940a58.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      #colourr {
+      color: #000;
+    }
+
+    #colourrr {
+      color: #ff4d73;
+      font-size: large;
+      text-align: center;
+      text-decoration: none;
+
+
+    }
+    #removeMargin{
+      margin-bottom: 0px;
+      position: fixed;
+    }
+    
+   
+    #toggleid{ display:none;}
+    </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-dark bg-dark fixed-top " id="removeMargin" >
+  
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="#"> <b> iPfly</b>-<small>The Professional Portfolio Creation Service</small></a>
+      <button class="navbar-toggler" type="button" id="toggleid" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title colll" id="offcanvasNavbarLabel">iPfly-The Professional Portfolio Creation Service
+          </h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active colll" id="colourrr" aria-current="page" href="#">
+
+              <?php
+                     
+                 
+                   
+                     if(!isset($_SESSION['Email'])) {
+                        echo' Please Login
+                         ';
+                        
+                     }else{
+                      echo "Wellcome ".$_SESSION['Email'] ;
+                     }
+                    
+                    
+                     
+                 
+                 ?>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link colll" id="colourr" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link colll" id="colourr" href="#">Template</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link colll" id="colourr" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link colll" id="colourr" href="#">Feedback</a>
+            </li>
+            
+            <a href="logout.php"><button type="button"  id="logout" class="btn btn-secondary btn-sm">Logout</button></a>     
+            
+          </ul>
+       
+        </div>
+      </div>
+    </div>
+  </nav>
+<!-- ------------------first free---------------- -->
+    <section class="templat">
+        <div class="title-box">
+          <h1 class="animate__animated animate__fadeInLeft">Template</h1>
+          <p class="animate__animated animate__fadeInRight">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolore  cupiditate maxime quis <br>
+            ullam voluptatibus? Aliquam illo nemo, sint unde commodi incidunt.</p>
+        </div>
+        <div class="templat-ror">
+          <div class="web-box animate__animated animate__fadeInLeft animate__delay-1s">
+            <img src="img/web/web img 1/Screenshot (26).png" alt="">
+            <h4>Website one<br></h4>
+            <small>$2</small>
+            <div class="button-box">
+              <button type="button"><a href="web preview/preview.html">Preview</a></button>
+            </div>
+            <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+          </div>
+    
+          <div class="web-box web-box animate__animated animate__fadeInDown animate__delay-1s">
+            <img src="img/D_site.jpg" alt="">
+            <h4>Website one<br></h4>
+            <small>$2</small>
+            <div class="button-box">
+              <button type="button">Preview</button>
+            </div>
+            <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+          </div>
+    
+    
+          <div class="web-box animate__animated animate__fadeInRight animate__delay-1s">
+            <img src="img/D_site.jpg" alt="">
+            <h4>Website one<br></h4>
+            <small>$2</small>
+            <div class="button-box">
+              <button type="button">Preview</button>
+            </div>
+            <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+          </div>
+    
+    
+        </div>
+    
+        <div class="templat-ror"data-aos="fade-up"
+        data-aos-duration="1000">
+          <div class="web-box">
+            <img src="img/D_site.jpg" alt="">
+            <h4>Website one<br></h4>
+            <small>$2</small>
+            <div class="button-box">
+              <button type="button">Preview</button>
+            </div>
+            <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+          </div>
+   
+         <div class="web-box">
+            <img src="img/D_site.jpg" alt="">
+            <h4>Website one<br></h4>
+            <small>$2</small>
+            <div class="button-box">
+              <button type="button">Preview</button>
+            </div>
+            <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+          </div>
+    
+         <div class="web-box">
+            <img src="img/D_site.jpg" alt="">
+            <h4>Website one<br></h4>
+            <small>$2</small>
+            <div class="button-box">
+              <button type="button">Preview</button>
+            </div>
+            <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+          </div>
+    
+          
+    
+          
+        </div>
+    
+<!-- =========================second================================= -->
+<div class="second">
+
+  <div class="title-box">
+    <h1 >Fast deal </h1>
+    
+  </div>
+  <div class="templat-ror" data-aos="fade-up"
+  data-aos-duration="1000">
+    <div class="web-box animated fadeInLeft delay-1s">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website one<br></h4>
+      <small>Free</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+
+    <div class="web-box ">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website two<br></h4>
+      <small>Free</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+    
+    
+    <div class="web-box">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website three<br></h4>
+      <small>Free</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+
+
+  </div>
+
+  <div class="templat-ror"data-aos="fade-up"
+  data-aos-duration="1000">
+    <div class="web-box">
+      <img src="img/4mc6mm2j3ih41.jpg" alt="">
+      <h4>Website four<br></h4>
+      <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+    
+    <div class="web-box">
+      <img src="img/4mc6mm2j3ih41.jpg" alt="">
+      <h4>Website five<br></h4>
+      <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+    
+    <div class="web-box">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website six<br></h4>
+      <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+    
+    
+    
+    
+  </div>
+</div>
+
+  
+  <div class="title-box">
+    <h1>Over 20+ Portfolio </h1>
+    
+  </div>
+  <div class="templat-ror"data-aos="fade-up"
+  data-aos-duration="1000">
+    <div class="web-box">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website one<br></h4>
+      <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+
+    <div class="web-box">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website one<br></h4>
+        <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+
+
+    <div class="web-box">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website one<br></h4>
+      
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+
+
+  </div>
+
+  <div class="templat-ror"data-aos="fade-up"
+  data-aos-duration="1000">
+    <div class="web-box">
+      <img src="img/4mc6mm2j3ih41.jpg" alt="">
+      <h4>Website one<br></h4>
+        <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+
+   <div class="web-box">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website one<br></h4>
+        <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+
+   <div class="web-box">
+      <img src="img/D_site.jpg" alt="">
+      <h4>Website one<br></h4>
+        <small>$2</small>
+      <div class="button-box">
+        <button type="button">Preview</button>
+      </div>
+      <p>Lorem ipsum dolor,  adipisicing elit. Ab ratione eum hic sint ex quo delectus doloribus esse </p>
+    </div>
+    
+  </div>
+
+  </div>
+      </section>
+      <footer class="text-center text-lg-start bg-dark text-white">
+
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+    
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+    
+        </section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+    
+                <div class="row mt-3">
+    
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+    
+                        <h6 class="text fw-bold mb-4">
+                            iPfly
+                        </h6>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos expedita quasi, culpa soluta
+                            ad deserunt
+                            laborum voluptas harum repellendus veritatis nihil aut eum molestias praesentium incidunt
+                            nesciunt. Optio, accusamus rerum!
+                        </p>
+                    </div>
+    
+    
+    
+    
+    
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+    
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Feature
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Responsive</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Creative design</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Low cost</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">iPfly creation</a>
+                        </p>
+                    </div>
+    
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+    
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Connect with us
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Instagram</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+    
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+    
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i> Jaipur ,Rajasthan</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            iPfly@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 91 8709360543</p>
+                        <p><i class="fas fa-phone me-3"></i> + 91 8709360543</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="#">iPfly</a>
+        </div>
+    
+    </footer>
+      
+      <script>
+        AOS.init();
+      </script>
+</body>
+</html>
